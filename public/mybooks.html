@@ -1,0 +1,50 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+    <link href="/public/css/main.css" rel="stylesheet" type="text/css">
+    <title>My Books</title>
+</head>
+
+<body>
+    <div class="head">
+        <h2 class="headLeft">Book Trading Club</h2>
+        <a href="/logout" class="headBtn">Log Out</a>
+        <a href="/profile" class="headBtn" id="username"></a>
+        <a href="/mybooks" class="headBtn" id="activeHeadBtn">My Books</a>
+        <a href="/" class="headBtn">All Books</a>
+    </div>
+    <div class="loader"></div>
+    <div id="myBooksOptions">
+        <br>
+        <button id="allMyBooksBtn">All My Books (<span id="allMyBooksCount">0</span>)</button>
+        <div id="allMyBooks"><button id="addBook" class="bookdiv">Add<br>Book</button></div>
+        <button id="incomingRequestsBtn">Received Requests (<span id="inReqCount">0</span>)</button>
+        <div id="incomingRequests"></div>
+        <button id="sentRequestsBtn">Sent Requests (<span id="outReqCount">0</span>)</button>
+        <div id="sentRequests"></div>
+        <button id="borrowedBooksBtn">Borrowed Books (<span id="borrowedBooksCount">0</span>)</button>
+        <div id="borrowedBooks"></div>
+    </div>
+    <div id="popup">
+        <form id="addBookForm">
+            <button type="button" class="xbtn">x</button><br>
+            <p4>Title:</p4><br>
+            <input type="text" name="title"></input><br>
+            <p4 id="titleError"></p4><br>
+            <p4>Author:</p4><br>
+            <input type="text" name="author"></input><br>
+            <p4 id="authorError"></p4><br>
+            <button type="button" id="submitBook">Submit</button>
+        </form>
+        <div id="popupUserInfo">
+            <button type="button" class="xbtn">x</button><br>
+            <p1>Username: </p1><p1 id="userInfoUsername"></p1><br><br>
+            <p1>Full Name: </p1><p1 id="userInfoFullName"></p1><br><br>
+            <p1>City: </p1><p1 id="userInfoCity"></p1><br><br>
+            <p1>State: </p1><p1 id="userInfoState"></p1><br><br>
+            <p1>Contact Info: </p1><p1 id="userInfoContact"></p1><br><br>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="controllers/mybooks.js"></script>

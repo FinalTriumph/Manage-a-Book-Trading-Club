@@ -1,0 +1,41 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+    <link href="/public/css/main.css" rel="stylesheet" type="text/css">
+    <title>Profile</title>
+</head>
+
+<body>
+    <div class="head">
+        <h2 class="headLeft">Book Trading Club</h2>
+        <a href="/logout" class="headBtn">Log Out</a>
+        <a href="/profile" class="headBtn" id="activeHeadBtn"></a>
+        <a href="/mybooks" class="headBtn">My Books</a>
+        <a href="/" class="headBtn">All Books</a>
+    </div>
+    <div class="loader"></div>
+    <div id="userInfo">
+        <p1>Username: </p1><p1 id="userInfoUsername"></p1><br><br>
+        <p1>Full Name: </p1><p1 id="userInfoFullName"></p1><br><br>
+        <p1>City: </p1><p1 id="userInfoCity"></p1><br><br>
+        <p1>State: </p1><p1 id="userInfoState"></p1><br><br>
+        <p1>Contact Info: </p1><p1 id="userInfoContact"></p1><br><br>
+        <button id="editBtn">Edit</button><p1></p1><br>
+    </div>
+    <div id="popup">
+        <div id="popupEditProfile">
+            <button type="button" class="xbtn">x</button><br>
+            <p4>Full Name: </p4><br>
+            <input type="text" name="fullName"/><br><br>
+            <p4>City: </p4><br>
+            <input type="text" name="city"/><br><br>
+            <p4>State: </p4><br>
+            <input type="text" name="state"/><br><br>
+            <p4>Contact Info: </p4><br>
+            <input type="text" name="contact"/><br><br>
+            <button id="saveProfile">Save</button>
+        </div>
+    </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="controllers/profile.js"></script>

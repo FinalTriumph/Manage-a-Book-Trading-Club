@@ -1,0 +1,44 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet" type="text/css">
+    <link href="/public/css/main.css" rel="stylesheet" type="text/css">
+    <title>Trading Club</title>
+</head>
+
+<body>
+    <div id="welcomediv">
+        <h1>Welcome to Book Trading Club</h1>
+        <h3>Here you can borrow books from other users<br>and offer your books to others.</h3>
+        <button class="SignUpLogIn SignUpBtn">Sign Up</button>
+        <button class="SignUpLogIn LogInBtn">Log In</button>
+    </div>
+    <div id="popup">
+        <form id="popupFormSignUp">
+            <button type="button" class="popupSignUpLogIn" id="SignUpActive">Sign Up</button>
+            <button type="button" class="popupSignUpLogIn LogInBtn">Log In</button><br>
+            <p4>Username:</p4><br>
+            <input type="text" name="SUname"></input><br>
+            <p4 id="SUusernameError"></p4><br>
+            <p4>Password:</p4><br>
+            <input type="password" name="SUpassword"></input><br>
+            <p4 id="SUpasswordError"></p4><br>
+            <button type="button" id="SUregister">Register</button><br>
+            <button type="button" class="cancelBtn">Cancel</button>
+        </form>
+        <form id="popupFormLogIn">
+            <button type="button" class="popupSignUpLogIn SignUpBtn">Sign Up</button>
+            <button type="button" class="popupSignUpLogIn" id="LogInActive">Log In</button><br>
+            <p4>Username:</p4><br>
+            <input type="text" name="LIname"></input><br>
+            <p4 id="LIusernameError"></p4><br>
+            <p4>Password:</p4><br>
+            <input type="password" name="LIpassword"></input><br>
+            <p4 id="LIpasswordError"></p4><br>
+            <button type="button" id="LIlogin">Log In</button><br>
+            <button type="button" class="cancelBtn">Cancel</button>
+        </form>
+    </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="controllers/general.js"></script>
