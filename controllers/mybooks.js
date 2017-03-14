@@ -103,6 +103,7 @@ $("#addBook").click(function() {
 $(".xbtn").click(function() {
     $("#popup, #addBookForm, #popupUserInfo").hide();
     $("#titleError, #authorError").html("");
+    $("#userInfoFullName, #userInfoCity, #userInfoState, #userInfoContact").html("");
 });
 
 $("#submitBook").click(function() {

@@ -70,4 +70,5 @@ function getOwner(e) {
 
 $(".xbtn").click(function(){
     $("#popup").hide();
+    $("#userInfoFullName, #userInfoCity, #userInfoState, #userInfoContact").html("");
 })
