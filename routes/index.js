@@ -4,6 +4,7 @@ var path = process.cwd();
 var User = require("../models/users");
 var Book = require("../models/books");
 var googleBookSearch = require("google-books-search");
+var passwordHash = require('password-hash');
 
 module.exports = function(app) {
     
@@ -29,8 +30,10 @@ module.exports = function(app) {
             } else {
                 var newUser = new User();
                 
+                var hashedPassword = passwordHash.generate(password);
+                
                 newUser.user.username = username;
-                newUser.user.password = password;
+                newUser.user.password = hashedPassword;
                 
                 newUser.save(function(err){
                     if(err) console.log(err);
@@ -47,7 +50,9 @@ module.exports = function(app) {
         User.findOne({ "user.username": username }, function(err, doc) {
             if (err) console.log(err);
             if (doc) {
-                if (doc.user.password === password) {
+                var hashedPassword = passwordHash.generate(password);
+                
+                if (passwordHash.verify(doc.user.password, hashedPassword)) {
                     req.session.user = username;
                     res.json({ "status": "redirect" });
                 } else {
