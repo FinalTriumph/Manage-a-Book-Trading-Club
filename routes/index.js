@@ -50,9 +50,7 @@ module.exports = function(app) {
         User.findOne({ "user.username": username }, function(err, doc) {
             if (err) console.log(err);
             if (doc) {
-                var hashedPassword = passwordHash.generate(password);
-                
-                if (passwordHash.verify(doc.user.password, hashedPassword)) {
+                if (passwordHash.verify(password, doc.user.password)) {
                     req.session.user = username;
                     res.json({ "status": "redirect" });
                 } else {
